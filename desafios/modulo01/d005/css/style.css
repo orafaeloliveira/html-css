@@ -1,0 +1,14 @@
+body{
+    background-image: url(/desafios/d005/imagens/bg-1200.png);
+    color:bisque;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+p#direitos{
+    margin-top: 30px;
+    text-align: center;
+}

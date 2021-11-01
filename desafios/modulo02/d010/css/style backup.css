@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Android';
+    src: url(../fonts/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+/* pseudoclasse raiz do documento, tudo o que for definido aqui vai servir para o documento inteiro */
+:root {
+    --cor0: #C5EBD6;
+    --cor1: #B3E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1A5C37;
+    --cor5: #063D1E;
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive, sans-serif;
+    --fonte-android: 'Android', cursive, sans-serif;
+    --larguramax: 800px;
+    --larguramin: 400px;
+    --sombra1: 0px 0px 10px rgba(0, 0, 0, 0.363);
+    --sombra2: 3px 3px 8px rgba(0, 0, 0, 0.363);
+}
+
+/* configuração global de todos os elementos da HTML, no caso todos terão margin 0 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor2);
+}
+
+header#cabecalho {
+    background-image: linear-gradient(var(--cor3), var(--cor5));
+    text-align: center;
+    min-height: 150px;
+    min-width: var(--larguramin);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+header > h1 {
+    font-family: var(--fonte-destaque), cursive;
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.267);
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.267);
+}
+
+nav#menu {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.363);
+    min-width: var(--larguramin);
+    margin-top: 0px;
+}
+
+nav#menu > a {
+    color: var(--cor1);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+nav#menu > a:hover {
+    transition: 0.5s;
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+/**
+    Corrigir H1 do cabeçalho entre 411px e 436px
+*/
+@media screen and (max-width: 435px) {
+    header#cabecalho{
+        padding: 10px;
+        /**
+            min-height: 100px;
+            background-image: linear-gradient(var(--cor3), var(--cor4));
+        */
+    }
+    header > h1{
+        margin-bottom: -10px;
+        font-size: 2.7em;
+        max-width: 380px;
+        margin: auto;
+    }
+    header > p{
+        top: 10px;
+        font-size: 1.1em;
+    }
+    nav#menu{
+        margin: auto;
+        /**
+        menu vertical centralizado
+            text-align: center;
+            padding: 0px;
+            background-image: linear-gradient(var(--cor4), var(--cor5));
+        */
+    }  
+    nav#menu a{
+        /**
+            text-align: center;
+            display: block;
+        */
+        font-size: 0.9em;
+    }
+
+    .spn-gender {
+        margin-left: 0px;
+        font-size: 0.9em;
+    }
+
+    .rd-gender {
+        margin-left:0px;
+    }
+}
+
+main#principal {
+    background-color: white;
+    margin: auto;
+    color: black;
+    font-family: var(--fonte-padrao);
+    min-width: var(--larguramin);
+    max-width: var(--larguramax);
+    box-shadow: var(--sombra1);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 1.8em
+}
+
+main h2 {
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 1.3em;
+    text-indent: 8px;
+    font-weight: normal;
+}
+
+/* largura das imagens independente do conteúdo */
+main img {
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    margin: 15px 0px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+div.youtube {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.youtube > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/**
+    div.youtube {
+        background-color: var(--cor5);
+        margin: 20px -20px 20px -20px;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    div.youtube > iframe {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+*/
+
+a.externo {
+    color: var(--cor5);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.externo:hover {
+    background-color: var(--cor1);
+    padding: 2px 6px;
+    transition: 0.5s;
+    color: var(--cor4);
+    text-decoration: underline;
+}
+
+a.externo::after {
+    content: "\1F517";
+}
+
+main strong {
+    color: var(--cor5);
+    font-weight: bold;
+}
+
+aside {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: var(--sombra2)
+}
+
+aside > h3 {
+    background-color: var(--cor3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: -10px;
+}
+
+aside p {
+    margin-top: 20px;
+}
+
+aside > ul {
+    margin-top: 20px;
+    list-style-type: '\2714\0020\0020';
+    columns: 2;
+    list-style-position: inside;
+}
+
+div > h3 {
+    background-color: var(--cor4);
+    padding: 10px;
+    margin: -10px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+}
+
+div#formulario {
+    position: relative;
+    margin: auto;
+    max-width: 400px;
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: var(--sombra2);
+}
+
+div > form {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+form input, select, textarea, .gender {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px rgb(133, 133, 133);
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+    background-color: white;
+}
+
+.gender {
+    background-color: white;
+    height: 40px;
+}
+
+.spn-gender {
+    float: left;
+    margin-left: 10%;
+}
+
+.rd-gender{
+    display: block;
+    width: 13px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.mb {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: var(--cor4);
+    color: white;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: var(--cor4);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+a#voltar {
+    background-color: #c5ebd696;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    text-decoration: none;
+    color: var(--cor5);
+    box-shadow: var(--sombra1);
+}
+
+a#voltar:visited{
+    color: var(--cor5);
+}
+
+a#voltar:hover {
+    background-color: var(--cor5);
+    color: var(--cor0);
+    transition: 0.5s;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: var(--cor5);
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
