@@ -56,14 +56,6 @@ section.image > pre {
     text-shadow: 1px 1px black;
 }
 
-/* p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-} */
-
 section.image {
     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.466);
 }
