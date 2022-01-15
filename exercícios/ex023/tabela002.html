@@ -12,6 +12,7 @@
         table {
             width: 550px;
             border-collapse: collapse;
+            position: relative;
         }
         th, td {
             padding: 10px;
@@ -34,9 +35,19 @@
             padding: 10px;
         }
 
-        thead {
+        thead > tr > th {
             position: sticky;
-            top: 0px;
+            top: -1px;
+            background-color: gray;
+        }
+        /* Efeito zebrado */
+        /* linhas ímpares - odd ou 2n-1 */
+        tbody > tr:nth-child(odd) {
+            background-color: lightskyblue;
+        }
+        /* linhas pares - even ou 2n */
+        tbody > tr:nth-child(even) {
+            background-color: lightgreen;
         }
     </style>
 </head>
