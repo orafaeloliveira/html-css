@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!-- autocomplete ativa ou desativa sugestão -->
+    <!-- para o php e html é importante que cada item de entrada tenha um name, o id é mais importante no js e p/ o label -->
+    <!-- é importante relacionar label ao seu respectivo input para facilitar a análise dos algoritmos de busca e do navegador -->
+    <!-- ao relacionar label e input o usuário pode clicar no label e ir direto para o respectivo input -->
+    <!-- GET tem limite de 3.000 bytes, não envia arquivos -->
+    <form action="cadastro.php" autocomplete="off" method="POST">
+        <p><label for="idnome">Nome:</label> <input type="text" name="nome" id="idnome"></p>
+        <p><label for="idsobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="idsobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
