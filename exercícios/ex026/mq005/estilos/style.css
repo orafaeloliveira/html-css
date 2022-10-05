@@ -19,28 +19,45 @@ h1 {
     padding: 10px;
 }
 
-a {
-    text-decoration: none;
+#icone {
+    display: block;
+    background-color: #484848;
     color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
 }
 
-/* #menu {
-    background-color: #303030;
-} */
+#icone:hover {
+    background-color: white;
+    color: black;
+}
 
-ul {
-    display: flex;
-    gap: 10px;
+#menu {
+    display: none;
+    /* background-color: #303030; */
 }
 
 li {
     list-style-type: none;
-    padding: 10px;
-    background-color: #575757;
 }
 
 li:hover {
     background-color: #808080;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: #575757;
+    text-align: center;
+    border-top: 2px solid gray;
+}
+
+a:hover {
+    background-color: gray;
 }
 
 main {
@@ -49,4 +66,15 @@ main {
     margin: auto;
     padding: 10px;
     border-radius: 10px;
+    margin-top: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 10px;
+    text-indent: 20px;
 }
