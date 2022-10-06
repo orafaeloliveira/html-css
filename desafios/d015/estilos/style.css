@@ -1,1 +1,17 @@
 @charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #5f2c82;
+}
+
+main {
+    background-color: white;
+    display: block;
+    margin: auto;
+    width: 250px;
+}
