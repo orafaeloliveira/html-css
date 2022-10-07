@@ -22,9 +22,19 @@
 @media screen and (width > 992px) {
     #cartao {
         grid-template-columns: 1fr 1fr;
+        width: 950px;
+        height: 350px;
     }
     #imagem {
         grid-column: 2;
-        background-position: center left;
+        grid-row: -1;
+        background-position: bottom left;
+        border-radius: 0px 15px 15px 0px;
+    }
+    main > div > h1 {
+        font-size: 32px;
+    }
+    main > div > p {
+        font-size: 18px;
     }
 }
