@@ -23,7 +23,7 @@
     #cartao {
         grid-template-columns: 1fr 1fr;
         width: 950px;
-        height: 350px;
+        height: auto;
     }
     #imagem {
         grid-column: 2;

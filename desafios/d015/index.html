@@ -19,14 +19,14 @@
         <div id="login">
             <h1>Login</h1>
             <p>Seja bem-vindo(a) novamente. Faça login para acessar as configurações no seu ambiente.</p>
-            <form id="formulario" autocomplete="on">
+            <form id="formulario" autocomplete="on" action="login.php">
                 <div class="campo">
                     <span class="material-symbols-outlined">person</span>
                     <input class="entrada" type="email" name="email" id="iemail" placeholder="seu e-mail" required autocomplete="email">
                 </div>
                 <div class="campo">
                     <span class="material-symbols-outlined">key</span>
-                    <input class="entrada" type="password" name="senha" id="isenha" placeholder="sua senha">
+                    <input class="entrada" type="password" name="senha" id="isenha" placeholder="sua senha" minlength="4" maxlength="8">
                 </div>
                 <input class="botoes" type="submit" value="Entrar">
                 <a id="esqueci-senha" href="#" class="botoes">Esqueci a senha <span id="icone-mensagem" class="material-symbols-outlined">mail</span></a>
